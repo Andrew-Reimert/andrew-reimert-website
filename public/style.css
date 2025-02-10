@@ -3,7 +3,31 @@
    "how to change link color." */
 
 body {
-  background-color: white;
-  color: black;
+  background: url(stars.png) repeat;
+  animation: scroll 90s linear infinite;
+  color: white;
   font-family: Verdana;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home-header {
+  padding: 1rem 1rem 3rem 1rem;
+}
+
+/* I'd like the home body to inherit the centering from body, but I don't know why it wont  */
+.home-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 5px solid #ccc;
+  padding: 1rem;
+  width: 50%;
+}
+
+@keyframes scroll {
+  100% {
+    background-position: 0px -1000%;
+  }
 }
